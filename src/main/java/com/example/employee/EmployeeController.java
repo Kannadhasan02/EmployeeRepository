@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping(value = "/employee")
+@RequestMapping(value = "/employeeo")
 public class EmployeeController {
 	@Autowired
 	EmployeeService empSer;
     static Logger log=Logger.getLogger(EmployeeController.class);
     
-    @PostMapping(value = "/insert")
+    @PostMapping(value = "/insertEmployee")
 	public String postEmployee(@RequestBody Employee e) {
 		return empSer.postEmployee(e);
 	}
